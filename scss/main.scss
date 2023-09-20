@@ -1,0 +1,1575 @@
+@import './resets';
+@import './variables';
+@import './buttons';
+@import './typography';
+@import './mixins';
+
+
+
+
+@function weight($weight-name){
+  @return map-get($font-weights, $weight-name );
+}
+
+
+//landing page//
+
+#hero{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; 
+  background-image: url(../images/background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.container{
+  display: flex;
+  max-width: 1035px;
+  margin: 0 auto;
+}
+
+.singin-btn{
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 55px;
+  padding-bottom: 30px;
+  padding-right: 120px;
+}
+
+.left-col{
+  margin: 0;
+  width:600px;
+
+
+  .cta-btns {
+    display: flex;
+    gap: 58px; 
+    margin-top: 48px;    
+  }
+
+  .join-us{
+    margin-top: 8px;
+  
+  }
+}
+
+.mobile-order{
+  display: none;
+}
+
+.landing-burger{
+  width: 448px;
+}
+
+
+
+/*menu page-header*/
+
+header{
+  background-color: $dark-green-blue;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index:99;
+  padding: 16px;
+  height: 102px;
+}
+
+.logo{
+  width: 100px;
+}
+.avatar{
+  width: 60px;
+}
+
+.user-name{
+  font-size: 1rem;
+}
+
+.header-nav{
+  @include flexSpacebetween();
+  margin: 0 auto;
+  padding-left:40px;
+  padding-right: 40px;  
+}
+
+.header-left{   
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar{
+  display: none;
+  justify-content: space-between;
+
+  .menu{
+    gap:3px;
+    display: flex;
+    position: relative;  
+    margin-left: 240px;
+  
+
+    a{
+      color: $creamy;
+      font-size: 1.4rem;
+      text-align: center;
+      text-decoration: none;
+      transition: 0.4s;
+      padding: 8px 16px;
+      border-radius: 99px;     
+      
+      &:hover{
+        color: $orange;
+      }
+  
+      &::before{
+        position: absolute;
+        content: "";  
+        width: 0%;
+        height: 1px;
+        border-bottom: 2px solid $orange;
+        bottom: 0px;
+        transition: width .3s;
+      }
+  
+      &:hover::before{
+        width: 8%;      
+      }
+    } 
+  
+    .is-active{
+      color: $orange;
+  
+      &::before{
+        position: absolute;
+        content: "";  
+        width: 8%;
+        height: 1px;
+        border-bottom: 2px solid $orange;
+        bottom: 0px;     
+      }
+    }
+  }    
+}
+
+
+.icons{
+   @include flexCenter;
+   gap:30px;
+   margin-left: 20px;     
+    
+  
+
+    .icon{
+      width:45px;   
+      transition: .4s;         
+      
+      &:hover{
+        transform: scale(1.1);       
+      }     
+    }  
+}
+
+
+.hamburger {
+  display: block;
+  position: relative;
+  z-index: 1;
+  user-select: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+
+    span{
+      display: block;
+      width: 33px;
+      height: 4px;
+      margin-bottom: 5px;
+      position: relative;
+      background-color: $creamy;
+      border-radius: 6px;
+      z-index: 1;
+      transform-origin: 0 0;
+      transition: 0.4s;
+  }
+
+&:hover span:nth-child(2){
+  transform: translateX(10px);
+  background-color: $orange;
+}
+
+&.is-active span:nth-child(1) {
+  transform: translate(0px,-2px) rotate(45deg);
+}
+
+&.is-active span:nth-child(2) {
+  opacity: 0;
+  transform: translate(15px);
+}
+
+&.is-active span:nth-child(3) {
+  transform: translate(-3px,3px) rotate(-45deg);
+}
+
+&.is-active:hover span{
+  background-color: $orange;
+}
+}
+
+.mobile-nav{
+  position: fixed;
+  top:0;
+  left:100%;
+  width:100%;
+  min-height: 100vh;
+  display: block;
+  z-index: 98;
+  background-color: $dark-green-blue;
+  padding-top: 80px;
+  transition: .4s;  
+
+  &.is-active{
+    left:0;
+  }
+  .user-name{
+    font-size: 1rem; 
+  }
+
+  a{
+    display: block;
+    text-align: center;
+    margin-top: 24px;
+    padding: 16px;
+    font-family: $fontFamilyUbuntu;
+    color: $creamy;
+    text-decoration: none;
+    font-size:1.4rem;
+   
+
+    &:hover{
+      color:$orange;
+      transition: .4s;
+    }
+  }
+
+  .social-icons{ 
+    @include flexCenter;      
+  }
+}
+
+/*menu page-category*/
+
+.category{
+  @include flexCenter;;
+  background-color: $light-green-blue;
+  padding-top: 142px;
+  padding-bottom: 36px;
+
+  .category-box{
+   @include flexCenter;
+   flex-wrap: wrap;
+   column-gap: 86px;  
+  }  
+
+  .category-item{  
+    text-decoration: none;   
+    
+    &:hover{
+      h4{
+        color: $orange; 
+      }               
+    }   
+    
+  img{
+    width: 110px;
+    border-radius: 129px;  
+    margin-bottom: 8px;  
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    
+    &:hover{
+      opacity: 80%;
+    }   
+  } 
+  
+  h4{
+    @include heading-style;
+    font-size: 1.2rem;
+    color: $creamy;
+  }
+
+  .is-active{
+    color: $light-orange;
+  }
+
+  .category-name{
+    transition: all ease-in-out .3s;  
+  } 
+ }
+}
+
+/*menu page-burgers*/
+
+.burgers{   
+  background-color: #f9edd0;
+  padding-top: 25px;
+  padding-left: 80px;
+  padding-right: 80px; 
+  padding-bottom: 40px;
+
+  h3{
+    @include heading-style;
+    color: $light-orange;
+    font-size: 1.4rem;
+  }
+
+  h2{
+    @include heading-style;
+    color: $orange;
+    font-size: 1.8rem;
+  }
+
+  p{
+    @include paragraph-style;
+    font-size: 1.1rem;
+    padding-top: 10px;
+    padding-bottom: 10px;  
+  }  
+
+  .container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    .card{      
+      background-color: #FBEED0;    
+      width: 218px;
+      height: 343px;
+      margin: 20px;   
+      border-radius: 8px;  
+      box-shadow: 0px 3px 0px 0px #e69d43be;  
+      box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.2), 0px 4px 0px 0px #ffa434e6;
+
+      text-align: center;
+      position: relative;        
+
+      &:hover{
+        cursor: pointer;
+        transition: all .8s ease;
+        transform: scale(1.02);   
+        box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2),0px 6px 0px 0px #f3992ce6;      
+      }
+
+      .like-icon{
+        position: absolute;
+        width: 24px;
+        top:20px;
+        left:175px;
+      }
+      
+     i{
+      color: $orange;
+      padding-bottom: 10px;
+      font-style: italic; 
+      font-family: $fontFamilyPoppins;   
+      padding-right: 10px; 
+      gap:8px;
+      display: flex;
+      justify-content: center;
+      font-weight: weight(SemiBold);
+      }
+
+      h3{
+        font-size: 1rem;  
+        text-transform: uppercase;    
+      }
+    }  
+
+    .price{       
+       
+
+      p{
+       color:$orange;
+       font-family: $fontFamilyPoppins;
+       font-style: italic;
+       padding:8px;
+      }
+    }
+
+    .card-image{
+      background: $light-green-blue;
+      height: 186px;
+      margin-bottom: 20px;    
+      background-size: cover;
+      border-radius: 8px 8px 0 0;         
+    }
+
+    .car-1{
+      background-image: url(../images/Burger01.jpg);
+    }
+    .car-2{
+      background-image: url(../images/Burger02.jpeg);
+    }
+    .car-3{
+      background-image: url(../images/Burger03.jpeg);
+    }
+    .car-4{
+      background-image: url(../images/Burger04.jpeg);
+    }
+    .car-5{
+      background-image: url(../images/Burger05.jpeg);
+    }
+    .car-6{
+      background-image: url(../images/Burger06.jpeg);
+    }
+    .car-7{
+      background-image: url(../images/Burger07.jpeg);
+    }
+    .car-8{
+      background-image: url(../images/Burger08.jpeg);
+    }    
+  }
+
+  .products-preview{
+    // @include flexCenter;  
+    background: rgba(0,0,0,.8);
+    position: fixed;
+    top:0px;
+    left:0; 
+    width:100%;
+    min-height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;   
+
+    .preview{
+      display: none; 
+      text-align: center;   
+      background-color: #fcf2db;
+      border-radius: 8px;
+      position: relative;
+      width: 40rem;    
+      
+      .bx-x{
+        position: absolute;
+        top:20px;
+        right:20px;
+        color: $creamy;
+        font-size: 2.5rem;
+        cursor: pointer;  
+        transition: transform 0.3s ease-in-out;   
+        
+        &:hover{
+          color: $dark-green-blue;
+          transform: rotate(45deg);
+        }
+      }
+  }  
+
+  .active{
+    display: inline-block;
+    width: 40%;
+    margin-top: 100px; 
+    box-shadow: 0px 6px 0px 0px $orange;    
+  }   
+
+    .detail{
+      @include paragraph-style;
+      font-size: 1rem;
+      padding: 0 20px 20px;
+    }
+
+    .burger-price{
+      font-family: $fontFamilyPoppins;
+      font-style: italic;
+      color: $orange;
+      font-size: 1.2rem;      
+    }
+
+    .buttons{
+      margin-bottom: 30px;
+    }
+ 
+  .burger-image{
+    background: $light-green-blue;   
+    margin-bottom: 20px;    
+    background-size: cover;
+    border-radius: 8px 8px 0 0;  
+    height: 376px;
+    object-fit: contain;
+    width: 100%;    
+  } 
+
+  .b-1{
+    background-image: url(../images/Burger01.jpg); 
+    }
+  .b-2{
+    background-image: url(../images/Burger02.jpeg); 
+    }
+  .b-3{
+    background-image: url(../images/Burger03.jpeg); 
+    }
+  .b-4{
+    background-image: url(../images/Burger04.jpeg); 
+    }
+  .b-5{
+    background-image: url(../images/Burger05.jpeg); 
+    }
+  .b-6{
+    background-image: url(../images/Burger06.jpeg); 
+    }
+  .b-7{
+    background-image: url(../images/Burger07.jpeg); 
+    }
+  .b-8{
+    background-image: url(../images/Burger08.jpeg); 
+    }
+  }
+ 
+  .buttons{
+   @include flexCenter;
+    gap:30px;
+  }
+
+  .popup{
+    display: none;
+    background: $creamy;   
+    position: absolute;
+    width: 450px; 
+    border-radius: 8px;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 30px;
+    box-shadow: 0px 6px 0px 0px $orange;  
+    z-index: 99;    
+    
+    .process{
+      display: flex;    
+         
+
+      .step{
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+
+        p{
+          font-size: .8rem;
+          font-weight: weight(SemiBold);
+          color: $orange;         
+        }
+
+        .bullet{        
+          height: 25px;
+          width: 25px;
+          border: 2px solid $orange;
+          display:inline-block;
+          border-radius: 50%;
+          position: relative;
+          
+          &.active{
+            background-color: $orange;
+            span{
+            color:$creamy;
+            }
+          }
+
+         .line{
+          &::before, &::after{
+            position: absolute;
+            content: '';
+            height: 2px;
+            width: 80px;
+            background: $orange;
+            bottom: 11px;
+            right:-90px;        
+                          
+          }            
+        }                 
+          span{
+            font-weight: weight(SemiBold);
+            font-size: 1rem;
+            color: $orange;               
+
+          }       
+        }        
+      }     
+    }    
+
+    img{
+      width: 100px;
+      padding-bottom: 10px;
+    }  
+  }
+
+  .button2{
+    @include flexCenter;
+    gap:20px;
+    margin-top: 16px;  
+  } 
+  }
+
+   /*cart-section*/
+
+  .backdrop{
+    position: fixed;    
+    background: rgba(0,0,0,.7);  
+    top:0px;
+    left:0; 
+    width:100%;
+    min-height: 100vh;
+    z-index: 1;
+    display: none;
+    opacity: 0;
+    transition: opacity .5s ease;
+  }
+
+  .backdrop.show{
+    display: block;
+    opacity: 1;
+  }
+
+  .sidecart{
+  
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width:350px;
+    background-color: $creamy;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateX(110%);
+    transition: transform .5s ease-in-out;
+    z-index: 2;
+
+    &.open{
+      transform: translateX(0);
+    }
+
+    .cart-actions{
+      padding: 14px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      border-top:2px solid #e18c2aa2;           
+      height: 246px;    
+      color: $orange;     
+     
+
+      select{
+        border: none;
+        padding: 5px;
+        border-radius: 15px;         
+      }
+      
+      .table-number{
+        margin: 0;
+        color: $orange;
+        font-size: .9rem;
+        font-family: $fontFamilyPoppins;     
+      }
+
+      .ordername{
+        color: $orange;
+        font-size: .9rem;
+        font-family: $fontFamilyPoppins;
+      }
+        .ordername1{
+          border: none;
+          border-radius: 15px;
+          padding: 10px;
+        }      
+
+      .subtotal{       
+        @include flexSpacebetween;
+        font-family: $fontFamilyPoppins;
+        font-size: 1.2rem;
+        color: $orange;
+        letter-spacing: 1px;
+        font-weight: weight(SemiBold);
+      }  
+      
+      .message-title{
+        font-family: $fontFamilyPoppins;
+        font-size: .9rem;
+      }
+
+      .message{
+        margin-bottom: 8px;;
+        padding: 4px;
+        font-family: $fontFamilyPoppins;           
+      }  
+    }   
+    
+    img.meal-icon{
+      width: 40px;
+      margin-left: 10px;
+    }    
+
+    .cart-content{
+      padding-top: 102px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;          
+
+      .cart-header{
+        padding:1rem;
+        border-bottom:1px solid rgb(217, 217, 217);
+        @include flexSpacebetween;    
+        
+        span.colse-btn{
+          font-size: 1.5rem;
+          color: $orange;
+          cursor: pointer;
+          transition: transform .2s ease;
+          padding: 0 10px;
+
+          &:hover{
+            transform: scale(1.2);
+          }
+        }       
+      }
+
+      .header-title{
+        // position: relative;
+
+        h3{
+          @include heading-style;
+          color: $orange;
+          font-size: 1.2rem;
+        }
+      }         
+    }
+
+    .cart-items{
+      flex: 1;
+      overflow-x: hidden;
+
+      .remove-item{     
+        @include flexCenter; 
+        position: absolute;
+        top:10px;
+        right:10px;
+        width: 20px;
+        height: 20px;         
+        border-radius: 50%;     
+        font-size: 1.2rem;       
+        cursor: pointer;           
+
+        span{
+          color: $orange;
+          user-select: none;
+        }
+      }
+
+      .cart-item{
+        position: relative;
+        padding: 1rem;
+        width: 100%;
+        // min-height: 150px;
+        display: flex;
+        border-bottom:1px solid rgb(217, 217, 217);       
+      }
+      .item-img{
+        flex:1;
+
+        img{
+          width: 100%;
+          border-radius: 129px;       
+          object-fit: contain;
+          box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+        }
+      }
+
+      .item-details{
+        flex:2;       
+        display: flex;
+        flex-direction: column;
+        gap:10px;
+        margin-left: 14px;
+
+        .name{
+          font-family: $fontFamilyPoppins;        
+          font-style: italic;
+          color: $orange;
+        }
+
+        .price{
+            font-family: $fontFamilyPoppins;
+            font-style: italic;
+            color: $orange;
+            font-size: 1.1rem;
+            font-weight: weight(SemiBold);
+          }
+
+        .qty{
+          align-self: flex-start;
+          display: flex;
+          align-items: center;
+          gap:10px;
+
+          .qut-num{
+            color: $orange;
+            font-size: 1rem;
+            font-family: $fontFamilyUbuntu;
+          }       
+        
+          span{
+            @include flexCenter;
+            width: 25px;
+            height: 25px;
+            background-color: $light-orange;
+            opacity: 60%;
+            color: #fff;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            font-weight: weight(SemiBold);
+            line-height: 1;
+            cursor: pointer;
+            box-shadow: 3px 3px 5px rgb(195, 195, 195),-1px;
+            user-select: none;
+            transition: scale .2s ease;
+
+            &:hover{
+              scale: (1.1);
+              background-color: $orange;
+            }
+
+            &:active{
+              scale: (1.1);
+            }                          
+          }
+        }                 
+      }
+    }   
+  }
+
+  /* payment-section*/
+.payment{
+  background-color: #F8EFDB;
+  height: 100vh;
+
+ form{ 
+    width: 600px;
+    margin: 71px auto 0 auto;
+    padding: 20px;   
+    background-color: $creamy;
+    border-radius: 8px;
+    color: $orange;   
+    font-family: $fontFamilyPoppins;
+
+    h3{
+      @include heading-style;
+      color: $orange;
+      letter-spacing: 3px;
+    }
+
+    .box1{
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 15px;
+      box-sizing: border-box;
+      margin: 10px 0 15px 0;
+    }
+
+    .card-input{
+      display: inline-block;   
+     
+      
+    .box2{
+      padding: 10px;
+      border: none;
+      border-radius: 15px;
+      margin: 10px 2px 15px 0;
+     }
+    }
+    button{
+      width: 49%;
+      margin-top: 30px; 
+      
+      a{
+        text-decoration: none;
+        color: $light-green-blue;          
+
+        &:hover{
+          color: $creamy;
+        }
+      }   
+    }  
+  }
+}
+
+/*compelted order section*/
+
+.completed-order{
+  padding-top: 125px;
+  background: $creamy;   
+  text-align: center;
+  padding-left: 200px;
+  padding-right: 200px;
+  padding-bottom: 40px;
+  height: 100vh;
+
+
+
+  h2{
+    @include heading-style;
+    color: $orange;
+    padding-top: 20px;    
+  }
+
+  P{
+    padding-top: 12px;
+    font-size: 1.2rem;
+    padding-bottom: 50px;    
+  }
+
+  .process{  
+    display: flex;        
+
+    .step{
+      width: 100%;
+      text-align: center;        
+
+      p{     
+        padding-bottom: 10px;
+        font-size: 1rem;
+        font-weight: weight(SemiBold);
+        color: $orange;     
+        margin-bottom: 10px;          
+      }
+
+      .bullet{        
+        height: 25px;
+        width: 25px;
+        border: 2px solid $orange;
+        display:inline-block;
+        border-radius: 50%;
+        position: relative;
+              
+        &.active{
+          background-color: $orange;
+          span{
+          color:$creamy;
+          }
+        }
+
+       .line{
+        &::before, &::after{
+          position: absolute;
+          content: '';
+          height: 2px;
+          width: 120px;
+          background: $orange;
+          bottom: 11px;
+          right:-150px;                                
+        }            
+      }               
+        span{
+          font-weight: weight(SemiBold);
+          font-size: 1rem;
+          color: $orange;               
+
+        }       
+      }        
+    }     
+  }
+
+  img{
+    width: 85px;    
+  }  
+
+  
+  /*takeaway-order-completed*/
+
+    .check{
+      margin-top: 80px;
+    }
+
+    .P1{
+      margin-top: 40px;
+    }
+
+    .button-t{
+      @include flexCenter;    
+       gap:30px;
+    } 
+}
+
+/* My orders-page*/
+
+.orders-box{
+  @include flexCenter;
+
+.your-orders{
+ 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 50px;
+
+  .order-item{
+  margin-top: 27px;
+  @include flexCenter;
+  gap: 40px;
+
+   img{
+    border-radius: 129px;
+    box-shadow: 2px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    
+   }
+
+   .bar{
+    h2{
+      font-size: 1.2rem;     
+      margin-bottom: 5px;
+      display: flex;
+    }
+   }
+  }
+
+  .progress-bar{
+    background:#959595;
+    width: 600px;
+    height: 10px;
+    border-radius: 5px;
+
+    .chicken{      
+      animation: chicken 1s linear forwards;
+
+      span{
+        background: $orange;
+        color: $creamy;       
+      }
+    }
+    .shake{
+      animation: shake 1s linear forwards;
+    }
+    .doughnuts{
+      animation: doughnuts 1s linear forwards;
+    }   
+ 
+    div{
+      height: 10px;
+      border-radius: 5px;
+      width: 0%;
+      background-color: $orange;
+     
+      
+      @keyframes chicken {
+        100%{
+          width: 85%;
+        }  
+      }
+      @keyframes shake {
+        100%{
+          width: 70%;
+        }  
+      }
+      @keyframes doughnuts {
+        100%{
+          width: 60%;
+        }  
+      }
+
+      span{
+        height: 40px;
+        width: 40px;
+        border-radius: 50%;
+        background: $creamy;
+        float: right;
+        margin-top: -15px;
+        margin-right: -20px;
+        color: $orange;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px solid $orange;
+        font-family: $fontFamilyPoppins;          
+        
+      }     
+    }
+  }
+}
+}
+
+
+
+
+/* @media */
+
+
+@media screen and (max-width: 768px) {
+
+  /* landing-page*/ 
+
+  .left-col {   
+    padding-left: 30px;
+    margin-top: 20px;  
+
+    .Maori {
+      font-size: 3.5rem; 
+    }
+  
+    .slogan {     
+      font-size: 26px;   
+      width: 320px; 
+      line-height: 50px;
+      padding-top: 20px;
+    }
+
+    .cta-btns{
+    display: none;  
+    }
+
+    .mobile-order{
+      display: block;
+      width: 50%;
+      padding-bottom: 8px;
+      padding-top: 20px;
+
+      a{
+        margin-top: 30px;
+      }      
+    }
+  }
+
+  .right-col{
+    display: none;
+  }
+
+  .btn-primary{
+    font-size: .8rem;  
+  }
+
+  .singin-btn{ 
+    padding-right: 20px;
+    padding-top: 50px;
+    padding-bottom: 50px;   
+  }
+
+  .primary-cta{
+    font-size: .8rem;
+    border: 1px solid;
+  }
+
+  .join-us{
+    font-size: .8rem;
+  
+  }
+
+   /* menu-page*/
+
+  header{
+  height: 70px;
+  align-items: center;  
+
+  .header-nav{
+    padding-left: 10px;
+    padding-right: 10px;  
+
+    .icons{
+      margin-bottom: 4px;
+    
+      gap:20px;
+
+    .icon{
+      width: 32px;   
+    }   
+  }    
+  }
+
+  .logo{
+    width: 70px;
+    margin-right: 70px;
+  }
+  .avatar{
+  display: none;   
+  }
+  .user-name{
+  display: none;   
+  }   
+}
+
+/* category-section*/
+.category{
+  padding-top: 100px;
+  padding-bottom: 30px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  
+  .category-item {
+
+    img{
+      width: 60px;     
+    }
+
+    h4{
+      font-size: .8rem;      
+    } 
+ }
+}
+
+
+/* burger-section*/
+
+.burgers{ 
+  padding: 20px;
+
+  h3{
+    font-size: 1rem;
+  }
+
+  h2{
+    font-size: 1.2rem;
+  }
+
+  p{
+    font-size: .8rem;
+    padding-bottom: 20px;
+  } 
+
+  .products-preview {
+    .burger-image{
+    height: 240px;
+    }
+  }  
+    .preview{
+      .detail{
+        font-size: .8rem;
+    }
+  }
+
+  .input-quantity{  
+    .decrement.increment{    
+    font-size: .8rem;
+  }
+}
+
+ .buttons{
+  .remove{
+    font-size: .8rem;    
+  }
+
+  .confirm{
+    font-size: .8rem;
+  }
+ } 
+}
+
+/* sidecart-section*/
+.sidecart{
+  width: 100%;  
+
+  .cart-content{
+    padding-top: 80px;
+  
+  
+  }
+
+  .cart-items{
+    margin:20px;
+  }  
+ }
+
+ /* pickup-order-completed */
+
+ .button-t{
+  display: flex;
+  flex-direction: column;
+
+  a{
+    font-size: 1rem;
+  }
+  
+ }
+}
+
+
+
+@media (max-width:600px){
+
+  .burgers{  
+  .products-preview {   
+    .active{
+      width: 50%;
+    }  
+  }  
+    .preview{
+      .detail{
+        font-size: .8rem;    
+    }  
+  }
+ }
+
+  .payment{
+      
+
+    form{
+      width: 100%;
+      box-sizing: border-box;
+      font-size: .9rem;
+
+      h3{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        font-size: 1.4rem;
+      }
+
+      .card-input{
+        display: block;
+      }
+
+      .box2{
+        width: 100%;
+      }
+      
+      .button{
+        margin-top: 30px;
+        display: flex;
+        text-align: center;
+        gap:20px;
+   
+        a{
+          width: 100%;      
+        }       
+      }
+    }
+  }
+
+.completed-order{ 
+ 
+  background: $creamy;   
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px; 
+  padding-bottom: 200px;
+
+
+  .chick-icon{
+    margin-top: 65px;
+
+  }
+  
+
+
+  .orders-box{
+   width: 100%;
+
+   .your-orders{
+    .bar{      
+      
+      h2{
+        font-size: .9rem;
+        padding-bottom: 15px;
+      }
+      .progress-bar{
+        width: 100%;     
+        background:#959595;
+        color: $orange;
+
+        .chickenburger{
+          background-color: $orange;
+        }
+
+         span{
+         font-size: .8rem;
+        }
+      }       
+    }  
+   }
+
+    img{
+    
+      width: 60px;
+    }
+  } 
+
+  h2{
+    @include heading-style;
+    color: $orange;
+    padding-top: 20px;    
+  }
+
+  P{
+    padding-top: 30px;
+    font-size: 1.2rem;
+    padding-bottom: 50px;    
+  }
+
+  .process{  
+    display: flex;      
+  
+
+    .step{
+      width: 100%;
+      text-align: center;        
+
+      p{     
+        padding-bottom: 10px;
+        font-size: .8rem;
+        font-weight: weight(SemiBold);
+        color: $orange;         
+      }
+
+      .bullet{        
+        height: 25px;
+        width: 25px;
+        border: 2px solid $orange;
+        display:inline-block;
+        border-radius: 50%;
+        position: relative;
+      
+        
+        &.active{
+          background-color: $orange;
+          span{
+          color:$creamy;
+          }
+        }
+
+       .line{
+        &::before, &::after{
+          position: absolute;
+          content: '';
+          height: 2px;
+          width: 60px;
+          background: $orange;
+          bottom: 11px;
+          right:-70px;        
+                        
+        }            
+      }               
+        span{
+          font-weight: weight(SemiBold);
+          font-size: 1rem;
+          color: $orange;           
+        }       
+      }        
+    }     
+  }
+
+  img{
+   
+    width: 100px;
+  }  
+ }
+}
+
+@media (max-width: 380px) {
+  
+  .completed-order{
+    height: auto;
+    width: 100%;
+    background-color: $creamy;
+  }
+
+  .mobile-nav{
+    a{
+      font-size: 1rem;
+      padding-top: 10px;
+    }
+  }
+
+}
+
+
+@media (max-width:472px){
+
+  .burgers{
+  .products-preview { 
+    .burger-image{
+      height: 220px;
+      }  
+
+    .active{
+      width: 70%;
+    }  
+  }  
+    .preview{
+      .detail{
+        font-size: .7rem;    
+    }  
+  }
+ }
+}
+
+
+
+@media (min-width:768px){
+
+  .hamburger{
+    display: none;
+  }
+
+  .navbar{
+    display: block;
+    display: flex;
+    align-items: center;   
+  }
+
+  .payment{   
+    width: 100%;
+    padding-top: 20px;
+
+    form{
+      margin-top: 64px;
+    
+     
+    h3{     
+      margin-top: 30px;
+      font-size: 1.5rem;
+      margin-bottom: 50px;
+    }
+  }
+
+  .button{      
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    gap:30px;
+   
+    a{    
+     margin-top: 30px;
+     width: 100%;     
+    }
+  }
+ } 
+}
+
+@media (min-width:1200px){
+  .burgers{
+    .intro{
+    padding: 30px 200px;
+    }
+
+    .products-preview { 
+      .burger-image{
+        height: 400px;
+        }  
+
+      .active{
+        width: 30%;
+      }  
+    }  
+      .preview{
+        .detail{
+          font-size: .7rem;    
+      }  
+    }
+  }
+}
+
+

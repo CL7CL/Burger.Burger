@@ -1,0 +1,275 @@
+%btn{
+  display: inline-block;
+  justify-content: flex-end;
+  border-radius: 38px;
+  padding: 4px 30px;
+  text-decoration: none;
+  font-family: $fontFamilyPoppins;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  transition: background-color .5s ease-in-out;
+
+  
+  &:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: $yellow;
+    color: $dark-green-blue;
+  }
+}
+
+%btn-p{
+  display: inline-block;
+  justify-content: flex-end;
+  border-radius: 38px;
+  border: 2px solid;
+  padding: 4px 30px;
+  text-decoration: none;
+  font-family: $fontFamilyPoppins;
+  text-transform: uppercase;
+  font-size: 1.2rem;
+  transition: background-color .5s ease-in-out;
+  
+  &:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: $yellow;
+    color: $dark-green-blue; 
+  }
+}
+
+%btn-c{
+
+  display: inline-block;
+  justify-content: flex-end;
+  border-radius: 38px;
+  border: 2px solid;
+  padding: 1px 20px;
+  text-decoration: none;
+  font-family: $fontFamilyPoppins;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.btn-primary{
+  @extend %btn;
+  color: $yellow;
+  background: rgba(255, 217, 119, 0.20);
+
+}
+
+.primary-cta{  
+  @extend %btn-p;
+  color: $yellow;  
+}
+
+.primary-cta-2{
+  @extend %btn-p;
+  color: $yellow;  
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.cta-btn{
+  @extend %btn-c;
+  color: $light-green-blue;
+
+  &:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid $light-green-blue;
+    background-color: $light-green-blue;
+    color: $creamy;
+    transition: all .5s ease; 
+  }
+}
+
+.remove{
+  @extend %btn-c;
+  color: $light-green-blue;  
+
+  &:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid $light-green-blue;
+    background-color: $light-green-blue;
+    color: $creamy;
+    transition: all .4s ease; 
+  } 
+}
+
+.confirm{
+  @extend %btn-c;
+  color: $creamy;  
+  background-color: $light-green-blue;
+  padding: 2px 20px;
+
+  &:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid $light-green-blue;
+    background-color: $light-green-blue;
+    color: $creamy;
+    transition: all .4s ease; 
+    opacity: 90%;   
+  }
+}
+
+.cart-buttons{
+  display: flex;
+  justify-content: space-evenly;
+  gap:10px; 
+  
+  a{
+    text-decoration: none;    
+  }
+
+    .back{
+      @extend %btn-c;
+      color: $light-green-blue;      
+      
+      &:hover{
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border: 2px solid $light-green-blue;
+        background-color: $light-green-blue;
+        color: $creamy;
+        transition: all .4s ease; 
+      }        
+    }
+
+    .order{
+      @extend %btn-c;
+      color: $creamy;  
+      background-color: $light-green-blue;
+    
+    
+      &:hover{
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        border: 2px solid $light-green-blue;
+        background-color: $light-green-blue;
+        color: $creamy;
+        transition: all .4s ease; 
+        opacity: 90%;   
+      }
+    }
+  }
+ 
+  .back-to-menu{
+    @extend %btn-c;
+  color: $light-green-blue;  
+
+  &:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid $light-green-blue;
+    background-color: $light-green-blue;
+    color: $creamy;
+    transition: all .4s ease; 
+  } 
+}
+
+   .tracking{
+    @extend %btn-c;
+  color: $creamy;  
+  background-color: $light-green-blue;
+  padding: 2px 20px;
+
+
+  &:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid $light-green-blue;
+    background-color: $light-green-blue;
+    color: $creamy;
+    transition: all .4s ease; 
+    opacity: 90%;   
+  }
+}
+
+   .back-button{
+    @extend %btn-c;
+  color: $creamy;  
+  background-color: $light-green-blue;
+  padding: 2px 35px;
+
+  &:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid $light-green-blue;
+    background-color: $light-green-blue;
+    color: $creamy;
+    transition: all .4s ease; 
+    opacity: 90%;   
+  }
+
+}
+  
+
+/* input-buttons*/
+
+.input-quantity{
+  display: inline-block;
+  border-radius: 38px;
+  border: 2px solid #CB7005;
+  padding: 2px 22px;
+
+  button{
+    color: $orange;
+    background-color: #fcf2db;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }  
+}
+
+input[type="number"]{
+  text-align: center;
+  font-size: 1.2rem;
+  border: none;
+  background-color:  #fcf2db;
+  color: $orange;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+  -webkit-appearance: none;
+  margin:0;
+}
+
+/*payment*/
+
+.go-back{
+  @extend %btn-c;
+  color: $light-green-blue; 
+  background-color: $creamy; 
+
+  &:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid $light-green-blue;
+    background-color: $light-green-blue;
+    color: $creamy;
+    transition: all .4s ease; 
+  } 
+}
+.go-pickup{
+  @extend %btn-c;
+  color: $light-green-blue; 
+  background-color: $creamy; 
+
+  &:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid $light-green-blue;
+    background-color: $light-green-blue;
+    color: $creamy;
+    transition: all .4s ease; 
+  } 
+}
+
+.pay-now{
+  @extend %btn-c;
+  color: $creamy;  
+  background-color: $light-green-blue;
+  padding: 2px 20px;
+
+
+  &:hover{
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 2px solid $light-green-blue;
+    background-color: $light-green-blue;
+    color: $creamy;
+    transition: all .4s ease; 
+    opacity: 90%;   
+  }
+}

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,400;0,600;0,700;1,200;1,300;1,400;1,600&family=Shrikhand&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+
+
+  <title>Menu</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="header-nav">
+      <div class="header-left">     
+        <a href="pickup-menu.html"><img class="logo" src="./images/BB_Logo.png" alt="logo"></a>
+
+        <a href="#"><img class="avatar" src="./images/User.png" alt="avatar"></a>
+        <p class="user-name"> Kia Ora<br>Daniel</p>
+      </div>     
+
+      
+      <div class="navbar">    
+        <div class="menu"> 
+          <a href="#">Home</a>
+          <a href="pickup-menu.html">Menu</a>
+          <a href="#">Specials</a>
+          <a href="#">My Orders</a>
+          <a href="#">Contact</a> 
+        </div>
+     </div> 
+   
+          <div class="icons">
+            <a href="#"><img class="icon" src="./images/Search.png" alt="search"></a>
+
+            <a href="#"><img id="open-cart-btn" class="icon" src="./images/hamburger.png" alt="orders"></a>
+          </div>         
+
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>       
+        </button>    
+    </nav>
+  </header>
+
+  <div class="mobile_menu">
+    <nav class="mobile-nav">
+     <a href="#"><img class="avatar" src="./images/User.png" alt="avatar"></a>
+     <p class="user-name"> Kia Ora &nbsp;Daniel</p>  
+     <a href="#">Home</a>
+     <a href="pickup-menu.html">Menu</a>
+     <a href="#">Specials</a>
+     <a href="#">My Orders</a>
+     <a href="#">Contact</a>    
+     <div class="social-icons">
+     <a href="https://www.instagram.com/burgerburgernz/?hl=en" target="_blank">
+       <i class="bx bxl-instagram-alt"></i>
+     </a>
+
+     <a href="https://www.facebook.com/burgerburgernz/" target="_blank">
+       <i class="bx bxl-facebook-circle" ></i>
+     </a>
+   </div>    
+   </nav>
+ </div>
+
+   <!--payment-section-->
+
+   <section class="payment">
+    
+    <form action="action">
+     <h3>Payment</h3>
+     <label for="name">Payer Name</label><br>
+     <input class="box1" type="text" name="name" id="name" placeholder="Enter Name"><br>
+     <label for="phone">Phone Number</label><br>
+     <input class="box1" type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10}"><br>
+     <label  for="card-number">Card Number</label><br>
+     <input class="box1" type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" ><br>
+  
+     <div class="card-input">
+       <label for="month">Card expiry month</label><br>
+       <input class="box2" type="month" name="month" id="month"><br>
+     </div>
+     <div class="card-input"> 
+       <label for="cardye">Card expiry year</label><br>
+       <input class="box2" type="text" name="year" id="cardye" placeholder="2030"><br>
+     </div>
+     <div class="card-input">
+       <label for="cardCVC">Card CVC</label><br>
+       <input class="box2" type="text" name="cvc" id="cardCVC" placeholder="CVC"><br>
+     </div>
+     <div class="button">
+      <a href="pickup-menu.html" class="go-back" >Back</a>    
+      <a href="pickup-order-completed.html" class="pay-now" id="paynow-btn" >Confirm</a>
+     </div>
+    </form>
+    
+  
+   </section>
+
+   
+
+
+
+  <script src="./main.js"></script>
+</body>
+</html>

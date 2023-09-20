@@ -1,0 +1,25 @@
+@mixin flexSpacebetween{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexCenter{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin heading-style {
+  font-family: $fontFamilyShrikhandy;
+  text-align: center;
+}
+@mixin paragraph-style {
+  font-family: $fontFamilyPoppins;
+  text-align: center;
+  color: $text-color;
+}
+
+
+
+

@@ -1,0 +1,55 @@
+
+/*Landing page*/
+
+.left-col {
+  .Maori {
+    font-size:6.25rem;
+    font-family: $fontFamilyShrikhandy;
+    color: transparent;
+    -webkit-text-stroke: 1px $creamy;
+    background: url(../images/backline.png);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 25s linear infinite;
+
+    @keyframes back {
+      100% {
+        background-position: 2000px 0;
+      }
+    }
+  }
+
+  .slogan {
+    width: 624px;
+    font-family: $fontFamilyDMSerifDisplay;
+    font-style: $italicFontStyle;
+    color: $yellow;
+    font-size: 3rem;
+    line-height: 99px; 
+  }
+}
+
+.join-us{
+  color: $yellow;
+  font-family: $fontFamilyPoppins;
+  font-size: 1.2rem;
+
+  a{
+    color: $yellow;
+    padding-left: 10px;
+  }  
+}
+
+/*menu page*/
+
+.user-name{
+  color: $creamy;
+  text-align: center;
+}
+
+header{
+  font-family: $fontFamilyUbuntu;
+  font-size: 1rem;
+}
+

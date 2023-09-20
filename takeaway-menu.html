@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,400;0,600;0,700;1,200;1,300;1,400;1,600&family=Shrikhand&family=Ubuntu:wght@400;500&display=swap" rel="stylesheet">
+
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/main.css">
+
+
+  <title>Menu</title>
+</head>
+
+<body>
+
+  <header>
+    <nav class="header-nav">
+      <div class="header-left">     
+        <a href="takeaway-menu.html"><img class="logo" src="./images/BB_Logo.png" alt="logo"></a>
+
+        <a href="#"><img class="avatar" src="./images/User.png" alt="avatar"></a>
+        <p class="user-name"> Kia Ora<br>Daniel</p>
+      </div>     
+
+      
+      <div class="navbar">    
+        <div class="menu"> 
+          <a href="#">Home</a>            
+          <a href="takeaway-menu.html" class="is-active">Menu</a>
+          <a href="#">Specials</a>
+          <a href="tackaway-track-orders.html">My Orders</a>
+        </div>
+     </div> 
+   
+          <div class="icons">
+            <a href="#"><img class="icon" src="./images/Search.png" alt="search"></a>
+
+            <a href="#"><img id="open-cart-btn" class="icon" src="./images/hamburger.png" alt="orders"></a>
+          </div>         
+
+        <button class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>       
+        </button>    
+    </nav>
+  </header>
+
+  <div class="mobile_menu">
+    <nav class="mobile-nav">
+     <a href="#"><img class="avatar" src="./images/User.png" alt="avatar"></a>
+     <p class="user-name"> Kia Ora &nbsp;Daniel</p>  
+     <a href="#">Home</a>
+     <a href="takeaway-menu.html">Menu</a>
+     <a href="#">Specials</a>
+     <a href="tackaway-track-orders.html">My Orders</a>
+     <a href="#">Contact</a>   
+     <div class="social-icons">
+       <a href="https://www.instagram.com/burgerburgernz/?hl=en" target="_blank">
+         <i class="bx bxl-instagram-alt"></i>
+       </a>
+ 
+       <a href="https://www.facebook.com/burgerburgernz/" target="_blank">
+         <i class="bx bxl-facebook-circle" ></i>
+       </a>
+     </div>
+   </nav>
+ </div>
+
+
+  <main>
+    <!--category-section-->
+
+   <section class="category">
+
+    <div class="category-box">
+    
+      <a href="#" class="category-item">
+        <img src="./images/Burger01.jpg" alt="Burger">
+        <h4 class="is-active">Burger</h4>
+      </a>
+
+      <a href="#" class="category-item">
+        <img src="./images/sides.jpg" alt="Sides">
+        <h4 class="category-name">Sides</h4>
+      </a>
+
+      <a href="#" class="category-item">
+        <img src="./images/salads.jpg" alt="Salads">
+        <h4 class="category-name">Salads</h4>
+      </a>
+
+      <a href="#" class="category-item">
+        <img src="./images/drinks.jpg" alt="Drinks">
+        <h4 class="category-name">Drinks</h4>
+      </a>
+
+      <a href="#" class="category-item">
+        <img src="./images/sweets.jpg" alt="Sweets">
+        <h4 class="category-name">Sweets</h4>
+      </a>
+    </div>
+   </section>
+
+   <!--burger-section-->
+
+   <section class="burgers">
+    <h3>Reka rawa</h3>
+    <h2>Our Burgers</h2>
+    <p class="intro">We make simple, honest burgers and use fresh produce from local supplies. All our food is made fresh daily with no added nasties.  Each bite shows just how much we love what we do!  
+    </p>
+
+
+    <div class="container">
+     
+      
+      <div class="card" data-name="p-1">
+        <img  class="like-icon" src="./images/Like.png" alt="like">
+        <div class="card-image car-1"></div>      
+          <i class="bx bxs-star">4.1</i>       
+          <h3>BEEF &amp; CHEESE</h3>      
+
+          <div class="price">
+            <p>$18.50</p>
+            <a href="#" class="cta-btn">ADD</a>        
+          </div>  
+        </div>
+      
+      
+
+      
+      <div class="card" data-name="p-2">
+        <img  class="like-icon" src="./images/Like.png" alt="like">
+        <div class="card-image car-2"></div>
+          <i class="bx bxs-star">4.4</i>
+          <h3>CHICKEN</h3>
+
+          <div class="price">
+            <p>$18.50</p>
+            <a href="#" class="cta-btn">ADD</a>        
+          </div>   
+        </div>
+      
+
+
+      <div class="card" data-name="p-3">
+        <img  class="like-icon" src="./images/Like.png" alt="Like">
+        <div class="card-image car-3"></div>
+          <i class="bx bxs-star">4.5</i>
+          <h3>FISH</h3>
+
+          <div class="price">
+            <p>$20.50</p>
+            <a href="#" class="cta-btn">ADD</a>        
+          </div>   
+        </div>
+      
+
+
+      <div class="card" data-name="p-4">
+        <img  class="like-icon" src="./images/Like.png" alt="Like">
+        <div class="card-image car-4"></div>
+          <i class="bx bxs-star">4.2</i>
+          <h3>OLD SMOKEY</h3>
+
+          <div class="price">
+            <p>$20.50</p>
+            <a href="#" class="cta-btn">ADD</a>        
+          </div>   
+        </div>      
+
+      <div class="card" data-name="p-5">
+        <img  class="like-icon" src="./images/Like.png" alt="Like">
+        <div class="card-image car-5"></div>
+          <i class="bx bxs-star">4.2</i>
+          <h3>MC FLY</h3>
+
+          <div class="price">
+            <p>$20.50</p>
+            <a href="#" class="cta-btn">ADD</a>        
+          </div>   
+        </div>
+
+      <div class="card" data-name="p-6">
+        <img  class="like-icon" src="./images/Like.png" alt="Like">
+        <div class="card-image car-6"></div>
+          <i class="bx bxs-star">4.2</i>
+          <h3>KIWI CLASSIC</h3>
+
+          <div class="price">
+            <p>$25.50</p>
+            <a href="#" class="cta-btn">ADD</a>        
+          </div>   
+        </div>     
+
+      <div class="card" data-name="p-7">
+        <img  class="like-icon" src="./images/Like.png" alt="Like">
+        <div class="card-image car-7"></div>
+          <i class="bx bxs-star">4.6</i>
+          <h3>double  beef </h3>
+
+          <div class="price">
+            <p>$25.50</p>
+            <a href="#" class="cta-btn">ADD</a>        
+          </div>   
+        </div>     
+
+      <div class="card" data-name="p-8">
+        <img  class="like-icon" src="./images/Like.png" alt="Like">
+        <div class="card-image car-8"></div>
+          <i class="bx bxs-star">4.3</i>
+          <h3>vege BEEF </h3>
+
+          <div class="price">
+            <p>$19</p>
+            <a href="#" class="cta-btn">ADD</a>        
+          </div>   
+        </div>  
+    
+    </div>   
+
+
+
+    <div class="products-preview">
+
+      <div class="preview" data-target="p-1"> 
+        <i class="bx bx-x"></i>    
+        <div class="burger-image b-1"></div>      
+        <h3>BEEF &amp; CHEESE</h3>
+        <p class="detail">BB’s NZ grass-fed beef patty (170g), pickles, aged cheddar, mustard, tomato jam, mayo.</p>
+        
+        <div class="input-quantity">
+          <button class="decrement" onclick="stepper(this, 'quantity-1')">-</button>
+          <input type="number" min="0" max="20" step="1" value="0" id="quantity-1" readonly>
+          <button class="increment" onclick="stepper(this, 'quantity-1')">+</button>
+        </div>
+        <p class="burger-price">$18.50</p> 
+        <div class="buttons">
+          <a href="#" class="remove">remove</a>
+          <a href="#" class="confirm" onclick="closePreviewAndChangeImage(this, './images/hamburger-1.png')">confirm</a>
+        </div>
+      </div>
+    
+   
+
+      <div class="preview" data-target="p-2">  
+        <i class="bx bx-x"></i>    
+        <div class="burger-image b-2"></div>      
+        <h3>CHICKEN</h3>
+        <p class="detail">Cajun grilled chicken thigh, red pepper salsa, tomato jam, aged cheddar, rocket aioli, wild rocket.</p>
+        
+        <div class="input-quantity">
+          <button class="decrement" onclick="stepper(this, 'quantity-2')">-</button>
+          <input type="number" min="0" max="20" step="1" value="0" id="quantity-2" readonly>
+          <button class="increment" onclick="stepper(this, 'quantity-2')">+</button>       
+        </div>        
+        <p class="burger-price">$18.50</p> 
+        <div class="buttons">
+          <a href="#" class="remove">remove</a>
+          <a href="#" class="confirm" onclick="closePreviewAndChangeImage(this, './images/hamburger-1.png')">confirm</a>
+        </div>
+      </div>
+
+      <div class="preview" data-target="p-3"> 
+        <i class="bx bx-x"></i>     
+        <div class="burger-image b-3"></div>      
+        <h3>FISH</h3>
+        <p class="detail">Your choice of // Beer-battered // Panko-Crumbed // Pan-Fried East Rock fish (Gisborne), caper dill mayo, tomato jam, rocket, squeeze of fresh lemon.</p>
+        
+        <div class="input-quantity">
+          <button class="decrement" onclick="stepper(this, 'quantity-3')">-</button>
+          <input type="number" min="0" max="20" step="1" value="0" id="quantity-3" readonly>
+          <button class="increment" onclick="stepper(this, 'quantity-3')">+</button>           
+        </div>        
+        <p class="burger-price">$20.50</p> 
+        <div class="buttons">
+          <a href="#" class="remove">remove</a>
+          <a href="#" class="confirm" onclick="closePreviewAndChangeImage(this, './images/hamburger-1.png')">confirm</a>
+        </div>
+      </div>
+
+      <div class="preview" data-target="p-4"> 
+        <i class="bx bx-x"></i>     
+        <div class="burger-image b-4"></div>      
+        <h3>OLD SMOKEY</h3>
+        <p class="detail">NZ grass-fed beef patty (170g), bacon, caramelised onions, smoked aged cheddar, BBQ sauce, mayo.</p>
+        
+        <div class="input-quantity">
+          <button class="decrement" onclick="stepper(this, 'quantity-4')">-</button>
+          <input type="number" min="0" max="20" step="1" value="0" id="quantity-4" readonly>
+          <button class="increment" onclick="stepper(this, 'quantity-4')">+</button>            
+        </div>        
+        <p class="burger-price">$20.50</p> 
+        <div class="buttons">
+          <a href="#" class="remove">remove</a>
+          <a href="#" class="confirm" onclick="closePreviewAndChangeImage(this, './images/hamburger-1.png')">confirm</a>
+        </div>
+      </div>
+
+      <div class="preview" data-target="p-5">  
+        <i class="bx bx-x"></i>    
+        <div class="burger-image b-5"></div>      
+        <h3>MC FLY</h3>
+        <p class="detail">Fried chicken, bacon, Swiss cheese, mayo, cos lettuce, BBQ sauce. Cannot be made gluten free.</p>
+        
+        <div class="input-quantity">
+          <button class="decrement" onclick="stepper(this, 'quantity-5')">-</button>
+          <input type="number" min="0" max="20" step="1" value="0" id="quantity-5" readonly>
+          <button class="increment" onclick="stepper(this, 'quantity-5')">+</button>         
+        </div>        
+        <p class="burger-price">$20.50</p> 
+        <div class="buttons">
+          <a href="#" class="remove">remove</a>
+          <a href="#" class="confirm" onclick="closePreviewAndChangeImage(this, './images/hamburger-1.png')">confirm</a>
+        </div>
+      </div>
+
+      <div class="preview" data-target="p-6">  
+        <i class="bx bx-x"></i>    
+        <div class="burger-image b-6"></div>      
+        <h3>KIWI CLASSIC</h3>
+        <p class="detail">NZ grass-fed beef patty (170g), bacon, aged cheddar, pickles, cos lettuce, tomato, fried egg, beetroot, tomato jam, mustard, mayo.</p>
+        
+        <div class="input-quantity">
+          <button class="decrement" onclick="stepper(this, 'quantity-6')">-</button>
+          <input type="number" min="0" max="20" step="1" value="0" id="quantity-6" readonly>
+          <button class="increment" onclick="stepper(this, 'quantity-6')">+</button>            
+        </div>        
+        <p class="burger-price">$25.50</p> 
+        <div class="buttons">
+          <a href="#" class="remove">remove</a>
+          <a href="#" class="confirm" onclick="closePreviewAndChangeImage(this, './images/hamburger-1.png')">confirm</a>
+        </div>
+      </div>
+
+      <div class="preview" data-target="p-7">  
+        <i class="bx bx-x"></i>    
+        <div class="burger-image b-7"></div>      
+        <h3>DOUBLE BEEF</h3>
+        <p class="detail">BB’s double NZ grass-fed beef patty (340g), pickles, aged cheddar, mustard, tomato jam, mayo.</p>
+        
+        <div class="input-quantity">
+          <button class="decrement" onclick="stepper(this, 'quantity-7')">-</button>
+          <input type="number" min="0" max="20" step="1" value="0" id="quantity-7" readonly>
+          <button class="increment" onclick="stepper(this, 'quantity-7')">+</button>            
+        </div>        
+        <p class="burger-price">$25.50</p> 
+        <div class="buttons">
+          <a href="#" class="remove">remove</a>
+          <a href="#" class="confirm" onclick="closePreviewAndChangeImage(this, './images/hamburger-1.png')">confirm</a>
+        </div>
+      </div>
+
+      <div class="preview" data-target="p-8">  
+        <i class="bx bx-x"></i>    
+        <div class="burger-image b-8"></div>      
+        <h3>VEGE BEEF</h3>
+        <p class="detail">A meat-free option of our favourite Beef &map; Cheese. Vege patty (mushroom, quinoa &map; walnut), pickles, aged cheddar, mustard, tomato jam, mayo.</p>
+        
+        <div class="input-quantity">
+          <button class="decrement" onclick="stepper(this, 'quantity-8')">-</button>
+          <input type="number" min="0" max="20" step="1" value="0" id="quantity-8" readonly>
+          <button class="increment" onclick="stepper(this, 'quantity-8')">+</button>           
+        </div>        
+        <p class="burger-price">$19</p> 
+        <div class="buttons">
+          <a href="#" class="remove">remove</a>
+          <a href="#" class="confirm" onclick="closePreviewAndChangeImage(this, './images/hamburger-1.png')">confirm</a>
+        </div>
+      </div>
+    </div>     
+   </section>
+
+   
+
+
+
+
+   <!--cart-section-->
+   <div class="backdrop"></div> 
+   <section id="sidecart" class="sidecart">
+    <div class="cart-content">
+
+      <div class="cart-header">
+        <img class="meal-icon" src="./images/meals.png" alt="hamburger-icon">
+       <div class="header-title">
+        <h3>Your Orders</h3>        
+      </div>      
+        <span id="close-btn" class="colse-btn">&times;</span>
+      </div>
+  
+      <div class="cart-items">
+
+        <div class="cart-item">
+          <div class="remove-item">
+           <span>&times;</span>          
+          </div>
+          <div class="item-img">
+           <img src="./images/Burger02.jpeg" alt="burger">
+          </div>
+          <div class="item-details">
+           <p class="name">CHICKEN</p>
+           <p class="price">$18.5</p>
+         <div class="qty">
+            <span>-</span>
+            <p class="qut-num">1</p>
+            <span>+</span>
+          </div>  
+         </div>
+        </div>
+
+        <div class="cart-item">
+          <div class="remove-item">
+           <span>&times;</span>          
+          </div>
+          <div class="item-img">
+           <img src="./images/drinks.jpg" alt="burger">
+          </div>
+          <div class="item-details">
+           <p class="name">RASPBERRY SHAKE</p>
+           <p class="price">$12</p>
+         <div class="qty">
+            <span>-</span>
+            <p class="qut-num">1</p>
+            <span>+</span>
+          </div>  
+         </div>
+        </div>
+
+        
+        <div class="cart-item">
+          <div class="remove-item">
+           <span>&times;</span>          
+          </div>
+          <div class="item-img">
+           <img src="./images/sweets.jpg" alt="burger">
+          </div>
+          <div class="item-details">
+           <p class="name">MINI DOUGHNUTS</p>
+           <p class="price">$12</p>
+         <div class="qty">
+            <span>-</span>
+            <p class="qut-num">1</p>
+            <span>+</span>
+          </div>  
+         </div>
+        </div>      
+        
+
+        <div class="cart-item">
+          <div class="remove-item">
+           <span>&times;</span>          
+          </div>
+          <div class="item-img">
+           <img src="./images/salads.jpg" alt="salad">
+          </div>
+          <div class="item-details">
+           <p class="name">CHICKEN BUNNUCE</p>
+           <p class="price">$18</p>
+         <div class="qty">
+            <span>-</span>
+            <p class="qut-num">1</p>
+            <span>+</span>
+          </div>  
+         </div>
+        </div>
+
+      </div>
+
+     <div class="cart-actions">  
+      <div class="subtotal">
+        <p>Total:</p>
+        <p>$ <span id="subtotal-price">60.5</span></p>
+       </div> 
+
+      <label  class="ordername" for="ordername">Your Name:</label>
+      <input class="ordername1" type="text" id="ordername" name="ordername" placeholder="Your name:">
+
+      <label class="message-title" for="message">Special Requests:</label>
+      <textarea class="message" id="message" name="message" rows="3" cols="50" placeholder="Your requests:"></textarea>
+
+
+     
+
+      
+
+      <div class="cart-buttons">       
+        <a href="payment.html" class="order">Pay Now</a>
+      </div>
+     </div>
+    </div>
+   </section>
+
+  
+
+   
+
+  </main>
+
+
+
+
+  <script src="./main.js"></script>
+</body>
+</html>
